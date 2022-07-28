@@ -1,0 +1,22 @@
+{% interface
+Page {
+	Title()
+	Body()
+}
+%}
+
+{% func PageTemplate(p Page) %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{%= p.Title() %}</title>
+	</head>
+	<body>
+		{%= p.Body() %}
+	</body>
+</html>
+{% endfunc %}
+
+{% code type BasePage struct {} %}
+{% func (p *BasePage) Title() %}Proreporting{% endfunc %}
+{% func (p *BasePage) Body() %}{% endfunc %}

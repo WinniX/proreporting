@@ -1,0 +1,13 @@
+{% code
+type HomePage struct {
+	BasePage
+}
+%}
+
+{% func (p *HomePage) Title() %}
+	Home page
+{% endfunc %}
+
+{% func (p *HomePage) Body() %}
+	<h1>Home page</h1>
+{% endfunc %}

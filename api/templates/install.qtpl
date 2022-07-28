@@ -1,0 +1,17 @@
+{% code
+type InstallPage struct {
+	BasePage
+    AppUrl string
+}
+%}
+
+{% func (p *InstallPage) Title() %}
+	Install page
+{% endfunc %}
+
+{% func (p *InstallPage) Body() %}
+    <div>
+        Successfully connected to apaleo! Your app is installed and available at:
+        <a href="{%s p.AppUrl %}">{%s p.AppUrl %}</a>
+    </div>
+{% endfunc %}

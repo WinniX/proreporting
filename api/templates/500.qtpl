@@ -1,0 +1,16 @@
+{% code
+type ErrorPage struct {
+	BasePage
+}
+%}
+
+{% func (p *ErrorPage) Title() %}
+	Something went wrong
+{% endfunc %}
+
+{% func (p *ErrorPage) Body() %}
+	<h1>Error page</h1>
+	<h3>
+		Ooops... something went wrong. We are looking into it.
+	</h3>
+{% endfunc %}

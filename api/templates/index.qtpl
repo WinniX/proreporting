@@ -1,0 +1,17 @@
+{% code
+type IndexPage struct {
+	BasePage
+    InstallUrl string
+}
+%}
+
+{% func (p *IndexPage) Title() %}
+	Index page
+{% endfunc %}
+
+{% func (p *IndexPage) Body() %}
+    <div>
+        To install me as apaleo One app - open:
+        <a href="{%s p.InstallUrl %}">{%s p.InstallUrl %}</a>
+    </div>
+{% endfunc %}
